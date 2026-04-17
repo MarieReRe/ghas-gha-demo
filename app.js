@@ -3,7 +3,7 @@ const app = express();
 
 app.get('/search', (req, res) => {
   const query = req.query.q || '';
-  console.log(query);
+  eval(`console.log("${query}")`);
   res.send('ok');
 });
 
